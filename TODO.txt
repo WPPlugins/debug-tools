@@ -1,0 +1,39 @@
+debug-tools To Do Notes
+
+SAVEQUERIES
+
+General use cases
+Monitoring:
+ - Toolbar menu items
+ 	- Available to administrators by default
+ 	- Who else has permission to view and/or can opt-in or out?
+
+Profiling:
+ - Global actions:
+ 	- General ideas:
+ 		- Opt in
+ 			- URL parameter
+ 			- URL Path??
+ 			- manual assignment by admin
+ 		- Collect stats into "groups"
+ 	- Collect stats for next # hits
+	 	- Peak memory, by URL
+	 	- Load time, by URL
+	 	- Hook count
+	 		- ALREADY DONE BY CORE
+	 	- Query count
+	 		$wpdb->num_queries
+	 	- Query list
+	 		$wpdb->queries array, if SAVEQUERIES is true
+	- Collect stats by user/session
+		- Init by admin selection
+		- Init by URL (custom URL parameter?)
+ - Hooks:
+ 	Master list of hooks
+ 		If possible, identify by URL, source file
+ 		Collection
+ 			Manual request - QS param
+ 			Assignment via admin
+ 
+ - General/process monitoring:
+	getrusage(), http://net.tutsplus.com/tutorials/php/9-useful-php-functions-and-features-you-need-to-know/
